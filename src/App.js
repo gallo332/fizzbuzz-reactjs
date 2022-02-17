@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import './index.css';
+import FizzBuzz from "./composents/FizzBuzz"
+//import { fizzbuzz } from "./components/fizzBuzz";
+//import Reset from "./components/Reset";
+//import Next from "./components/Next";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="App" className="container">
+      <header className=".jumbotron.col-sm-8.col-sm-offset-2">
+        <h1>React Fizz Buzz</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+           Counting incrementally, any number divisable by 3 is replaced by the word "fizz", and any number divisible by five with the word "buzz".
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <FizzBuzz/>
       </header>
     </div>
   );
 }
 
 export default App;
+
